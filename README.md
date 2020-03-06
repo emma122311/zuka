@@ -1,5 +1,5 @@
 # zuka
-手機版下拉選單
+手機版左側導覽 無限階層.
 ```
 <ul class="sub-menu">
 	<li class="menu-item-has-children">
@@ -23,7 +23,7 @@
 	</li>
 </ul>
 ```
-網頁版下拉選單
+電腦網頁左側導覽 無限階層
 ```
 <ul class="megamenu four-column"  style="padding: 30px 45px !important;min-width: 10px !important">
  	<li style="min-width: 135px !important">
