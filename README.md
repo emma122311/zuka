@@ -1,5 +1,7 @@
 # zuka
+
 Header(頭) 的修改位置
+
 ```
 1.assets
 2.js
@@ -8,6 +10,7 @@ Header(頭) 的修改位置
 5.搜索下一個修改JS
 ```	
 商品詳情修改
+
 ```
 button 下一個
 
@@ -95,6 +98,7 @@ img 變小利用 pr--85 pl--85 加在img的class中
  </script>
 ```
 購物車修改（原本在main.js 中的Product Quantity註解）
+
 ```
 <td class="product-quantity">
     <div class="quantity">
@@ -120,7 +124,8 @@ img 變小利用 pr--85 pl--85 加在img的class中
         });	
     </script>
 ```
-手機版左側導覽 無限階層.
+手機版左側導覽 無限階層
+
 ```
 <ul class="sub-menu">
 	<li class="menu-item-has-children">
@@ -138,7 +143,9 @@ img 變小利用 pr--85 pl--85 加在img的class中
 	</li>
 </ul>
 ```
+
 電腦網頁左側導覽 無限階層
+
 ```
 <ul class="megamenu four-column"  style="padding: 30px 45px !important;min-width: 10px !important">
  	<li style="min-width: 135px !important">
