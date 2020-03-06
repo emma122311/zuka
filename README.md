@@ -1,4 +1,91 @@
 # zuka
+商品詳情修改
+```
+button 下一個
+
+<div class="row hidden-xs-down" style="text-align: center; ">
+      <div class="col pb--20" style="font-size: 24px;">
+           <button onclick="product_detail_next()" class="action-btn-2 ">
+	      <i class="fa fa-angle-up fa-lg"></i>
+           </button>
+       </div>
+</div>
+
+button 上一個
+
+<div class="row hidden-xs-down" style="text-align: center">
+     <div class="col " style="font-size: 24px;">
+          <button onclick="product_detail_prev()" class="action-btn-2 ">
+	      <i class="fa fa-angle-down fa-lg"></i>
+	  </button>
+     </div>
+</div>
+
+img 變小利用 pr--85 pl--85 加在img的class中
+
+<div class="product-gallery__large-image mb-md--30">
+     <div class="product-gallery__wrapper">
+          <div class="zuka-element-carousel main-slider image-popup"
+                    data-slick-options='{
+                    "slidesToShow": 1,
+                    "slidesToScroll": 1,
+                    "infinite": true,
+                    "arrows": false, 
+                    "asNavFor": ".nav-slider"
+                    }'>
+                <figure class="product-gallery__image zoom pr--85 pl--85">
+                     <img src="assets/img/products/prod-14-1.jpg" alt="Product">
+                </figure>
+                <figure class="product-gallery__image zoom pr--85 pl--85">
+                    <img src="assets/img/products/prod-13-1.jpg" alt="Product">
+                </figure>
+                <figure class="product-gallery__image zoom pr--85 pl--85">
+                    <img src="assets/img/products/prod-13-2.jpg" alt="Product">
+                </figure>
+                <figure class="product-gallery__image zoom pr--85 pl--85">
+                    <img src="assets/img/products/prod-12-1.jpg" alt="Product">
+                </figure>
+         </div>
+         <div class="product-gallery__actions pr--85" style="bottom: 0px !important;">
+              <button class="action-btn-2 btn-zoom-popup">
+                    <i class="dl-icon-zoom-in"></i>
+              </button>
+         </div>
+    </div>
+</div>
+
+<style>
+        @media (min-width:921px) {
+            .hidden-xs-up {
+                display: none !important;
+            }
+
+            .cellphone.slick-btn.slick-prev.slick-arrow {
+                display: none !important;
+            }
+
+            .cellphone.slick-btn.slick-next.slick-arrow {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 920px) {
+            .hidden-xs-down {
+                display: none !important;
+            }
+        }
+    </style>
+
+<script>
+        function product_detail_prev() {
+            $(".cellphone.slick-btn.slick-prev").click();
+        }
+
+        function product_detail_next() {
+            $(".cellphone.slick-btn.slick-next").click();
+        }
+ </script>
+```
 購物車修改（原本在main.js 中的Product Quantity註解）
 ```
 <td class="product-quantity">
