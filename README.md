@@ -1,4 +1,12 @@
 # zuka
+Header(頭) 的修改位置
+```
+1.assets
+2.js
+3.main.js
+4.$headerTotalHeaight = $headerPosition + $mainHeaderHeight
+5.搜索下一個修改JS
+```	
 商品詳情修改
 ```
 button 下一個
