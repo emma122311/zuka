@@ -1,4 +1,30 @@
 # zuka
+購物車修改（原本在main.js 中的Product Quantity註解）
+```
+<td class="product-quantity">
+    <div class="quantity">
+    	<input type="number" class="quantity-input"  name="amount" id="product_id" value="1" min="1">
+        <div class="dec qtybutton change">-</div>
+        <div class="inc qtybutton change">+</div>
+    </div>
+</td>
+<script>
+        $(".change").on("click", function () {                                                                         
+            var $button = $(this);
+            var oldValue = $button.parent().find("input").val();
+            if ($button.hasClass("inc")) {
+                var newVal = parseFloat(oldValue) + 1;
+            } else {
+                if (oldValue > 1) {
+                    var newVal = parseFloat(oldValue) - 1;
+                } else {
+                    newVal = 1;
+                }
+            }
+            $('#product_id').val(newVal);
+        });	
+    </script>
+```
 手機版左側導覽 無限階層.
 ```
 <ul class="sub-menu">
