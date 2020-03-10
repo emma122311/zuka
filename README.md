@@ -12,7 +12,7 @@ Header(頭) 的修改位置
 商品詳情修改
 
 ```
-button 下一個
+button 下一個（在<div class="product-gallery__nav-image">下新增）
 
 <div class="row hidden-xs-down" style="text-align: center; ">
       <div class="col pb--20" style="font-size: 24px;">
@@ -64,6 +64,8 @@ img 變小利用 pr--85 pl--85 加在img的class中
          </div>
     </div>
 </div>
+   
+   新增css
 
 <style>
         @media (min-width:921px) {
@@ -86,6 +88,8 @@ img 變小利用 pr--85 pl--85 加在img的class中
             }
         }
     </style>
+
+新增js
 
 <script>
         function product_detail_prev() {
