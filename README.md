@@ -487,6 +487,24 @@ img 變小利用 pr--85 pl--85 加在img的class中
                                         </div>
                                     </div>
                                 </div>
+-  1  +  中 js 
+<script>
+        $(".change").on("click", function () {                                                                         
+            var $button = $(this);
+            var oldValue = $button.parent().find("input").val();
+            if ($button.hasClass("inc")) {
+                var newVal = parseFloat(oldValue) + 1;
+            } else {
+                if (oldValue > 1) {
+                    var newVal = parseFloat(oldValue) - 1;
+                } else {
+                    newVal = 1;
+                }
+            }
+            $('#product_id').val(newVal);
+        });	
+    </script>
+	
 ```
 
 footer 新增手機版下拉選單
@@ -675,4 +693,20 @@ footer 新增手機版下拉選單
                 </div>
             </div>
         </footer>
+```
+
+功能鍵  三 從左到右淡出(css)
+
+```
+<style>        
+            .side-navigation-wrapper {
+                right: unset;
+                left: 0 !important;
+                -webkit-transform: translateX(-350px);
+                -moz-transform: translateX(-350px);
+                -ms-transform: translateX(-350px);
+                -o-transform: translateX(-350px);
+                transform: translateX(-350px);
+            }
+ </style>
 ```
