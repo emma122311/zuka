@@ -395,7 +395,7 @@ img 變小利用 pr--85 pl--85 加在img的class中
  </ul>
 ```
 
-商品詳情   - 1  +   修改版
+商品詳情      -  1   +     修改版
 
 ```
 <div class="col-md-6 product-main-details mt--55 mt-sm--25 ">
@@ -443,43 +443,6 @@ img 變小利用 pr--85 pl--85 加在img的class中
                                                 </button>
                                             </div>
                                         </div>
-
-                                         <!-- <div class="col-lg-6 col-sm-6">
-                                                    <button type="button"
-                                                        class="btn btn-style-1 btn-semi-large btn-shape-round add-to-cart"
-                                                        style="margin-bottom: 2rem;border-radius: 0.8rem;width: 100%;padding: 0px 55px;"
-                                                        onclick="add('<?php echo $detail['data']['product_id'];?>','detail_qty_<?php echo $detail['data']['product_id'];?>','<?php echo $product_belong; ?>')">
-                                                        加入購物車
-                                                    </button>
-                                                </div>
-                                                <div class="col-lg-6 col-sm-6 pl--0">
-                                                    <button type="button"
-                                                        class="btn btn-style-1 btn-semi-large btn-shape-round add-to-cart"
-                                                        style="margin-bottom: 2rem;border-radius: 0.8rem;width: 100%;padding: 0px 55px;"
-                                                        onclick="add('<?php echo $detail['data']['product_id'];?>','detail_qty_<?php echo $detail['data']['product_id'];?>','<?php echo $product_belong; ?>')">
-                                                        立即結帳
-                                                    </button>
-                                                </div> -->
-                                            <!-- <div class="pb--10" >                                                
-                                                <form class="form--action">
-                                                    <div class="product-action d-flex align-items-center " >
-                                                        <td class="product-quantity" >
-                                                            <div class="quantity" >
-                                                                <input type="number" class="quantity-input"  name="amount" id="product_id" value="1" min="1">
-                                                                <div class="dec qtybutton change" >-</div>
-                                                                <div class="inc qtybutton change" >+</div>
-                                                            </div>
-                                                        </td>                                                                                               
-                                                    </div>      
-                                                </form>
-                                            </div> -->
-                                            <!-- style="border-color:#CECECE;border-style:solid;" 購物車邊框 -->
-                                            <!-- <div class="selectPopupBox-numberBox flexbox pb--10 product-action d-flex align-items-center quantity">                                                
-                                                <i class=" dec qtybutton change"></i>
-                                                <input type="number" class="selectPopupBox-amountBox amountBox text-smail" style="text-align: center;" value="1" max="15"
-                                                     name="">
-                                                <i class=" inc qtybutton change" style="padding-left: 80px !important;"></i>
-                                            </div> -->
                                         <div class="product-meta mt--35 mt-lg--25 mt-sm--15 pt-sm--1 pl--1 pr--20"
                                             style="width: 35rem;">
                                             <div class="accordion__single mb--30 mb-sm--20" style="border-bottom-width: 1px !important;
@@ -524,4 +487,192 @@ img 變小利用 pr--85 pl--85 加在img的class中
                                         </div>
                                     </div>
                                 </div>
+```
+
+footer 新增手機版下拉選單
+
+```
+<footer class="footer footer-1 bg-color" style="border-top-style:solid ; border-color:#ccc;">
+            <div class="footer-top pt--30 pt-md--60 d-none d-lg-block">
+                <div class="container-fluid">
+                    <div class="row footer-row">
+                        <div class="footer-column footer-column  mb-md--30 ">                          
+                            <div class="footer-widget text-center text-sm-left">
+                            </div>                         
+                        </div>
+                        <div class="footer-column footer-column-2  mb-md--25 ">
+                            <div class="footer-widget text-center text-sm-left ">
+                                <h3 class="widget-title mb--25 mt--15 mb-xs--20 font_white">會員中心</h3>
+                                <ul class="widget-menu ">
+                                    <li><a class="font_white" href="download_center.html" target="_blank">會員條款</a></li>
+                                    <li><a class="font_white" href="download_center.html" target="_blank">下載專區</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-column footer-column-3 mb-md--25 ">
+                            <div class="footer-widget text-center text-sm-left ">
+                                <h3 class="widget-title mt--15 mb--25 font_white">購物說明</h3>
+                                <ul class="widget-menu">
+                                    <li><a class="font_white" href="shopping_guide.html" target="_blank">配送方式</a></li>
+                                    <li><a class="font_white" href="shopping_guide.html" target="_blank">付款方式</a></li>
+                                    <li><a class="font_white" href="shopping_guide.html" target="_blank">換貨服務</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-column footer-column-4 mb-md--30 ">
+                            <div class="footer-widget text-center text-sm-left">
+                                <h3 class="widget-title mt--15 mb--25 font_white">服務時間</h3>
+                                <ul class="widget-menu">
+                                    <li><span class="font_white">星期一至星期五</span></li>
+                                    <li><span class="font_white">08:30 – 17:30</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-column footer-column ">
+                            <div class="footer-widget text-center text-sm-left ">
+                                <div class="textwidget mb--10 mb-sm--20">
+                                        <a href="index.html" class="footer-logo">
+                                            <h3 >昕荋睿</h3>
+                                        </a>
+                                    </div>
+                            <div class="widget_contact_info font_white">
+                                <ul>
+                                    <li><i class="fa fa-phone "></i><span class="font_white" > 04-25310101</span></li>
+                                    <li><i class="fa fa-envelope"></i><a  class="font_white" href=" service@shinglow.com.tw"> service@shinglow.com.tw</a></li>
+                                    <li><i class="fa fa-map-marker"></i><span class="font_white">台中市豐原區豐原大道一段647號3樓</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                            <div class="footer-widget text-center text-sm-left" style="padding: 4% 0% 12% 0%;">                                
+                                <!-- Social Icons Start Here -->
+                                <ul class="social social-medium">
+                                    <li class="social__item">
+                                        <a href="" target="_blank" class="social__link">
+                                            <i class="fa fa-twitter font_white"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="" target="_blank" class="social__link">
+                                            <i class="fa fa-google-plus font_white"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="" target="_blank" class="social__link">
+                                            <i class="fa fa-facebook font_white"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="" target="_blank" class="social__link">
+                                            <i class="fa fa-youtube font_white"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="header-inner"  target="_blank" class="social__link">
+                                            <i class="fa fa-instagram font_white"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- Social Icons End Here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-wrapper">
+                <div class="row mb--40 mb-md--20 mb-sm--10">
+                    <div class="col-lg-12">
+                        <!-- Widget Start Here -->
+                        <div class="text-center text-sm-center">
+                            <div class="textwidget mt--30 mb--30">
+                                <a href="im" class="footer-logo">
+                                    <img src="assets/img/logo/logo_2.png"   alt="Logo"  style="width:177px; height: 70px;"/>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Widget End Here -->
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="accordion__single">
+                            <div class="accordion__header" id="headingOne">
+                                <h4 class="accordion__link" data-target="#accordionOne">
+                                    <b>會員中心</b>
+                                </h4>
+                            </div>
+                            <div id="accordionOne" class="accordion__body hide-in-default">
+                                <div class="accordion__text">
+                                    <a href="">會員條款</a>
+                                </div>
+                                <div class="accordion__text">
+                                    <a href="">下載專區</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion__single">
+                            <div class="accordion__header" id="headingTwo">
+                                <h4 class="accordion__link" data-target="#accordionTwo">
+                                    <b>購物說明</b>
+                                </h4>
+                            </div>
+                            <div id="accordionTwo" class="accordion__body hide-in-default">
+                                <div class="accordion__text">
+                                    <a href="">配送方式</a>
+                                </div>
+                                <div class="accordion__text">
+                                    <a href="">付款方式</a>
+                                </div>
+                                <div class="accordion__text">
+                                    <a href="">換貨服務</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion__single">
+                            <div class="accordion__header" id="headingThree">
+                                <h4 class="accordion__link" data-target="#accordionThree">
+                                    <b>服務時間</b>
+                                </h4>
+                            </div>
+                            <div id="accordionThree" class="accordion__body hide-in-default">
+                                <div class="accordion__text">
+                                    <a href="">星期一至星期五</a>
+                                </div>
+                                <div class="accordion__text">
+                                    <a href="">08:30 – 17:30</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion__single">
+                            <div class="accordion__header" id="headingFive">
+                                <h4 class="accordion__link" data-target="#accordionFive">
+                                    <b>聯絡我們</b>
+                                </h4>
+                            </div>
+                            <div id="accordionFive" class="accordion__body hide-in-default">
+                                <div class="accordion__text">
+                                    <a href="index.html">昕荋睿</a>
+                                </div>
+                                <div class="accordion__text">
+                                    <i class="fa fa-phone"></i><span> &nbsp;04-25310101</span>
+                                </div>
+                                <div class="accordion__text">
+                                    <i class="fa fa-envelope"></i><span> &nbsp; service@shinglow.com.tw</span>
+                                </div>
+                                <div class="accordion__text">
+                                    <i class="fa fa-building"></i><span> &nbsp;台中市豐原區豐原大道一段647號3樓</span>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom pt--25 pt-sm--35 pb--25 pb-xs--45" style="background-color:#397BAE;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p class="copyright-text " style="color: #fff;">&copy; 2020 昕荋睿 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 ```
