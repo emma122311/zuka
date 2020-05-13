@@ -394,9 +394,10 @@ img 變小利用 pr--85 pl--85 加在img的class中
     </li>                                               
  </ul>
 ```
-```
+
 商品詳情   - 1  +   修改版
 
+```
 <div class="col-md-6 product-main-details mt--55 mt-sm--25 ">
                                     <div class="product-summary">
                                         <div class="clearfix"></div>
@@ -441,7 +442,9 @@ img 變小利用 pr--85 pl--85 加在img的class中
                                                     &nbsp;&nbsp;
                                                 </button>
                                             </div>
-                                            <!-- <div class="col-lg-6 col-sm-6">
+                                        </div>
+
+                                         <!-- <div class="col-lg-6 col-sm-6">
                                                     <button type="button"
                                                         class="btn btn-style-1 btn-semi-large btn-shape-round add-to-cart"
                                                         style="margin-bottom: 2rem;border-radius: 0.8rem;width: 100%;padding: 0px 55px;"
@@ -477,8 +480,6 @@ img 變小利用 pr--85 pl--85 加在img的class中
                                                      name="">
                                                 <i class=" inc qtybutton change" style="padding-left: 80px !important;"></i>
                                             </div> -->
-
-                                        </div>
                                         <div class="product-meta mt--35 mt-lg--25 mt-sm--15 pt-sm--1 pl--1 pr--20"
                                             style="width: 35rem;">
                                             <div class="accordion__single mb--30 mb-sm--20" style="border-bottom-width: 1px !important;
