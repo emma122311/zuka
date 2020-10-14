@@ -104,6 +104,10 @@ img 變小利用 pr--85 pl--85 加在img的class中
 購物車修改（原本在main.js 中的Product Quantity註解）
 
 ```
+在html 中引入 jquery <很重要>
+
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+ 
 <td class="product-quantity">
     <div class="quantity">
     	<input type="number" class="quantity-input"  name="amount" id="product_id" value="1" min="1">
