@@ -714,3 +714,18 @@ footer 新增手機版下拉選單
             }
  </style>
 ```
+
+修改網頁icom 抓不到的解決方法
+```
+1.找到 assets/plugins.css 修改路徑
+
+ @font-face {
+    font-family: dl-icon;
+    src: url(/assets3/fonts/dl-icon.eot?v=1.1.);
+    src: url(/assets3/fonts/dl-icon??v=1.1.#iefix) format("embedded-opentype"), url(/assets3/fonts/dl-icon.woff?v=1.1.) format("woff"), url(/assets3/fonts/dl-icon.ttf?v=1.1.) format("truetype"), url(/assets3/fonts/dl-icon.svg?v=1.1) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+2.重新 vagrant reload 即可
+```
