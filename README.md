@@ -703,15 +703,15 @@ footer 新增手機版下拉選單
 
 ```
 <style>        
-            .side-navigation-wrapper {
-                right: unset;
-                left: 0 !important;
-                -webkit-transform: translateX(-350px);
-                -moz-transform: translateX(-350px);
-                -ms-transform: translateX(-350px);
-                -o-transform: translateX(-350px);
-                transform: translateX(-350px);
-            }
+   .side-navigation-wrapper {
+       right: unset;
+       left: 0 !important;
+       -webkit-transform: translateX(-350px);
+       -moz-transform: translateX(-350px);
+       -ms-transform: translateX(-350px);
+       -o-transform: translateX(-350px);
+        transform: translateX(-350px);
+      }
  </style>
 ```
 
@@ -729,3 +729,170 @@ footer 新增手機版下拉選單
 
 2.重新 vagrant reload 即可
 ```
+```
+修改商品詳情圖片播放與點擊後的效果
+
+```
+<div class="col-12 pl--0">
+     <style>
+     .swiper-button {
+      z-index: 19;
+      top: 50%;
+      font-size: 20px;
+      line-height: 50px;
+      color: #040404;
+      background: #fff;
+      opacity: 1;
+      cursor: pointer;
+      margin: 0px;
+      transition: all .2s;
+      padding: 12px 3px;
+      width: auto;
+      transform: translate(0, -50%);
+      }
+
+      .swiper-button:hover {
+            background: #fff;
+        }
+
+        .scrollbars::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(199, 199, 199, 0.3);
+            border-radius: 15px;
+            background-color: rgba(199, 199, 199, 0.3);
+        }
+
+          .scrollbars::-webkit-scrollbar {
+              height: 10px;
+              background-color: rgba(199, 199, 199, 0.3);
+          }
+
+          .scrollbars::-webkit-scrollbar-thumb {
+              border-radius: 15px;
+              -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+              background-color: #000000;
+          }
+
+          .scrollbars {
+              height: 100%;
+              width: 100%;
+              overflow-x: scroll;
+          }
+
+            .mask {
+                opacity: 0.3;
+            }
+
+      </style>
+         <div class="product-image">
+             <div class="product-gallery">
+                 <div id="details" class="carousel slide carousel-fade"
+                     style="padding-left: 1px !important;padding-right: 0px !important;"
+                     data-ride="carousel" data-interval="false">
+                     <div class="carousel-inner">
+                         <div class="carousel-item ca active" id='b1'>
+                                 <img src="/assets3/img/list/list01.jpg"
+                                     class="d-block w-100 " alt="">
+                         </div>
+                         <div class="carousel-item ca" id='b2'>
+                             <img src="/assets3/img/list/list02.jpg" class="d-block w-100 "
+                                 alt="">
+                         </div>
+                         <div class="carousel-item ca" id='b3'>
+                             <img src="/assets3/img/list/list03.jpg" class="d-block w-100 "
+                                 alt="">
+                         </div>
+                     </div>
+                     <a class="carousel-control-prev" href="#details" role="button"
+                         data-slide="prev">
+                         <div class="swiper-button" onclick="mask_ch()"><i
+                                 class="fa fa-chevron-left"></i></div>
+                     </a>
+                     <a class="carousel-control-next" href="#details" role="button"
+                         data-slide="next">
+                         <div class="swiper-button" onclick="mask_ch()"><i
+                                 class="fa fa-chevron-right"></i></div>
+                     </a>
+                 </div>
+             </div>
+
+             <div class="product-gallery__nav-image">
+                 <div class="scrollbars" style="overflow-x: auto;overflow-y: hidden;">
+                     <table>
+                         <tr>
+                             <td>
+                                 <div style="width: 100px;height: 100px;margin: 10px 0px;"
+                                     class="">
+                                     <a onclick="carousel_ch(this.id)" id='a_b1'
+                                         class="mask">
+                                         <img width="100%" src="/assets3/img/list/list01.jpg"
+                                             alt="Products"
+                                             data-large="/assets3/img/list/list01.jpg"
+                                             title="Фото">
+                                     </a>
+                                 </div>
+                             </td>
+                             <td>
+                                 <div style="width: 100px;height: 100px;">
+                                     <a onclick="carousel_ch(this.id)" id='a_b2'
+                                         class="mask">
+                                         <img width="100%" src="/assets3/img/list/list02.jpg"
+                                             alt="Products">
+                                     </a>
+                                 </div>
+                             </td>
+                             <td>
+                                 <div style="width: 100px;height: 100px;">
+                                     <a onclick="carousel_ch(this.id)" id='a_b3'
+                                         class="mask">
+                                         <img width="100%" src="/assets3/img/list/list03.jpg"
+                                             alt="Products">
+                                     </a>
+                                 </div>
+                             </td>
+                         </tr>
+                     </table>
+                 </div>
+             </div>
+         </div>
+      </div>
+      例如澄霖的商品詳情
+      帶入下列jquery,在網頁上加上ID，css
+<script>
+    let b = $("div .carousel-item.ca")
+    for (let i = 0; i < b.length; i++) {
+        $('#a_' + b[i].id).attr('mask')
+        console.log(b[i].className)
+        if (b[i].className == 'carousel-item ca active') {
+
+            $('#a_' + b[i].id).removeClass('mask')
+        }
+    }
+
+    function mask_ch() {
+        let dt = setInterval(function () {
+            for (let i = 0; i < b.length; i++) {
+                $('#a_' + b[i].id).addClass('mask')
+                if (b[i].className == 'carousel-item ca active') {
+                    $('#a_' + b[i].id).removeClass('mask');
+                    clearInterval(dt);
+                }
+            }
+        }, 100);
+    }
+
+    function carousel_ch(id) {
+
+        let a = $('#' + id.split('_')[1])
+        console.log(a[0].className)
+        if (a.className != 'carousel-item ca active') {
+            let b = $("div .carousel-item.ca")
+            for (let i = 0; i < b.length; i++) {
+                b[i].className = 'carousel-item ca';
+                $('#a_' + b[i].id).addClass('mask')
+            }
+            // console.log($('#' + id.split('_')[1]))
+            $('#' + id.split('_')[1])[0].className = 'carousel-item ca active';
+            $('#a_' + id.split('_')[1]).removeClass('mask');
+        }
+    }
+</script>
