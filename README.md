@@ -732,7 +732,6 @@ footer 新增手機版下拉選單
 ```
 修改商品詳情圖片播放與點擊後的效果
 
-```
 <div class="col-12 pl--0">
      <style>
      .swiper-button {
@@ -896,3 +895,4 @@ footer 新增手機版下拉選單
         }
     }
 </script>
+```
