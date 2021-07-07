@@ -896,3 +896,103 @@ footer 新增手機版下拉選單
     }
 </script>
 ```
+
+```
+側邊購物車看不到按鈕跟總數
+
+//  1.新增css
+<style>
+    .scrollbar2 {
+        overflow-x: hidden;
+        overflow-y: auto;
+        color: #000;
+        font-size: 16px;
+        height: 100%;
+    }
+
+    .scrollbar2::-webkit-scrollbar {
+        width: 0px;
+        height: 100%;
+    }
+
+    /*滾動條裡面小方塊樣式*/
+    .scrollbar2::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    /*滾動條裡面軌道樣式*/
+    .scrollbar2::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        border-radius: 0;
+        background: #A8A8A8
+    }
+    .mini-cart__product .remove {
+        right: 0px !important;
+        color: #9D9D9D;
+    }       
+</style>
+	
+ 2.修改如下
+    1. <aside class="mini-cart" id="miniCart" style="z-index: 9999;" > 
+    2. <div class="mini-cart__content scrollbar2" style="max-height: 65vh; overflow-y: scroll;">
+    3. <ul id="cart_height" class="mini-cart__list" style="max-height: 65vh;">
+    4. 把下列整段程式碼移到第2點下
+	<div class="mini-cart__total mb--15 mt--20">  
+             <span>總金額:</span>
+             <span class="ammount">NTD.總數</span>
+       </div>
+       <div class="mini-cart__buttons">
+            <a href="/shop/checkout_cart" class="btn btn-fullwidth btn-style-1 bor">查看購物車</a>
+       </div>
+	
+例如：邁宇國際
+	<aside class="mini-cart" id="miniCart" style="z-index: 9999;">
+                <div class="mini-cart-wrapper pt--15">
+                    <a href="" class="btn-close"><i class="dl-icon-close"></i></a>
+                    <div class="mini-cart-inner">
+                        <h5 class="mini-cart__heading  mb--15">購物車</h5>
+                        <div class="mini-cart__content scrollbar2" style="max-height: 65vh; overflow-y: scroll;">
+                            <ul id="cart_height" class="mini-cart__list" style="max-height: 65vh;">
+                                <li class="mini-cart__product">
+                                    <a href="javascript:;" class="remove-from-cart remove" >
+                                        <i class="dl-icon-close"></i>
+                                    </a>
+                                    <div class="mini-cart__product__image">
+                                        <img src="置入圖片位置" alt="">
+                                    </div>
+                                    <div class="mini-cart__product__content">
+                                        <a class="mini-cart__product__title" href="/shop/product_details/pid/">
+                                            名稱
+                                        </a>
+                                        <span class="mini-cart__product__quantity"> x NTD.價格></span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <br>
+                            <ul class="mini-cart__list">
+                                <li class="mini-cart__product">
+                                    <div class="mini-cart__product__content">
+                                        <a class="mini-cart__product__title" href="#">尚未購物</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mini-cart__total mb--15 mt--20">
+                            <span>總金額:</span>
+                            <span class="ammount">NTD.總數</span>
+                        </div>
+                        <div class="mini-cart__buttons">
+                            <a href="/shop/checkout_cart" class="btn btn-fullwidth btn-style-1 bor">查看購物車</a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+	
+```
+	
+```
+
+```
+	
+	
